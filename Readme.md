@@ -1,7 +1,7 @@
 
 # cheerio-select
 
-  Tiny wrapper around FB55's excellent CSSselect library
+  Tiny wrapper around FB55's excellent [CSSselect]() library.
 
 ## Usage
 
@@ -18,6 +18,11 @@
 * Consider adding client-side tests
   * psuedo-visibility: https://github.com/jquery/sizzle/blob/master/test/unit/selector.js#L530
   * psuedo-form: https://github.com/jquery/sizzle/blob/master/test/unit/selector.js#L554
+
+## Run tests
+
+    npm install
+    make test
 
 ## License 
 
