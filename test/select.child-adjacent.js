@@ -27,18 +27,18 @@ describe('select.child/adj', function() {
   t( "Child w/ Class", "p > a.blog", ["mark","simon"] );
   t( "All Children", "code > *", ["anchor1","anchor2"] );
   t( "All Grandchildren", "p > * > *", ["anchor1","anchor2"] );
-  // t( "Adjacent", "#qunit-fixture a + a", ["groups"] );
-  // t( "Adjacent", "#qunit-fixture a +a", ["groups"] );
-  // t( "Adjacent", "#qunit-fixture a+ a", ["groups"] );
-  // t( "Adjacent", "#qunit-fixture a+a", ["groups"] );
-  // t( "Adjacent", "p + p", ["ap","en","sap"] );
-  // t( "Adjacent", "p#firstp + p", ["ap"] );
-  // t( "Adjacent", "p[lang=en] + p", ["sap"] );
-  // t( "Adjacent", "a.GROUPS + code + a", ["mark"] );
-  // t( "Comma, Child, and Adjacent", "#qunit-fixture a + a, code > a", ["groups","anchor1","anchor2"] );
+  t( "Adjacent", "#qunit-fixture a + a", ["groups"] );
+  t( "Adjacent", "#qunit-fixture a +a", ["groups"] );
+  t( "Adjacent", "#qunit-fixture a+ a", ["groups"] );
+  t( "Adjacent", "#qunit-fixture a+a", ["groups"] );
+  t( "Adjacent", "p + p", ["ap","en","sap"] );
+  t( "Adjacent", "p#firstp + p", ["ap"] );
+  t( "Adjacent", "p[lang=en] + p", ["sap"] );
+  t( "Adjacent", "a.GROUPS + code + a", ["mark"] );
+  t( "Comma, Child, and Adjacent", "#qunit-fixture a + a, code > a", ["groups","anchor1","anchor2"] );
   t( "Element Preceded By", "#qunit-fixture p ~ div", ["foo", "moretests","tabindex-tests", "liveHandlerOrder", "siblingTest"] );
   t( "Element Preceded By", "#first ~ div", ["moretests","tabindex-tests", "liveHandlerOrder", "siblingTest"] );
-  // t( "Element Preceded By", "#groups ~ a", ["mark"] );
+  t( "Element Preceded By", "#groups ~ a", ["mark"] );
   t( "Element Preceded By", "#length ~ input", ["idTest"] );
   t( "Element Preceded By", "#siblingfirst ~ em", ["siblingnext"] );
 
@@ -46,7 +46,7 @@ describe('select.child/adj', function() {
   t("Element Directly Preceded By with a context.", "#siblingfirst + em", ["siblingnext"]);
 
   length("Parent div for next test is found via ID (#8310)", "#listWithTabIndex", 1);
-  // length("Find by general sibling combinator (#8310)", "#listWithTabIndex  li:eq(2) ~ li", 1);
+  length("Find by general sibling combinator (#8310)", "#listWithTabIndex  li:eq(2) ~ li", 1);
   length("Make sure the temporary id assigned by sizzle is cleared out (#8310)", "#__sizzle__", 0);
   length("Parent div for previous test is still found via ID (#8310)", "#listWithTabIndex", 1);
 

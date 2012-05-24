@@ -28,12 +28,12 @@ describe('select.class', function() {
   t('("p .blog") : should find elements within class', 'p .blog', ['mark', 'simon']);
 
   // No support for UTF8 yet...
-  // t( "Class selector using UTF8", ".台北Táiběi", ["utf8class1"] );
-  // //t( "Class selector using UTF8", ".台北", ["utf8class1","utf8class2"] );
-  // t( "Class selector using UTF8", ".台北Táiběi.台北", ["utf8class1"] );
-  // t( "Class selector using UTF8", ".台北Táiběi, .台北", ["utf8class1","utf8class2"] );
-  // t( "Descendant class selector using UTF8", "div .台北Táiběi", ["utf8class1"] );
-  // t( "Child class selector using UTF8", "form > .台北Táiběi", ["utf8class1"] );
+  t( "Class selector using UTF8", ".台北Táiběi", ["utf8class1"] );
+  t( "Class selector using UTF8", ".台北", ["utf8class1","utf8class2"] );
+  t( "Class selector using UTF8", ".台北Táiběi.台北", ["utf8class1"] );
+  t( "Class selector using UTF8", ".台北Táiběi, .台北", ["utf8class1","utf8class2"] );
+  t( "Descendant class selector using UTF8", "div .台北Táiběi", ["utf8class1"] );
+  t( "Child class selector using UTF8", "form > .台北Táiběi", ["utf8class1"] );
 
   t( "Escaped Class", ".foo\\:bar", ["foo:bar"] );
   t( "Escaped Class", ".test\\.foo\\[5\\]bar", ["test.foo[5]bar"] );

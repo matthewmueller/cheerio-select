@@ -67,13 +67,13 @@ describe('select.element', function() {
   });
 
   t( "Checking sort order", "h2, h1", ["qunit-header", "qunit-banner", "qunit-userAgent"] );
-  // t( "Checking sort order", "h2:first, h1:first", ["qunit-header", "qunit-banner"] );
+  t( "Checking sort order", "h2:first, h1:first", ["qunit-header", "qunit-banner"] );
   t( "Checking sort order", "#qunit-fixture p, #qunit-fixture p a", ["firstp", "simon1", "ap", "google", "groups", "anchor1", "mark", "sndp", "en", "yahoo", "sap", "anchor2", "simon", "first"] );
 
   it('("#lengthtest #idTest") : it should handle id of ID', function() {
     expect($("#lengthtest #idTest", dom).map(helpers.ids)).to.eql(['idTest']);
-    // expect($("#lengthtest [name='id']", dom).map(helpers.ids)).to.eql(['idTest']);
-    // expect($("#lengthtest input[id='idTest']", dom).mgiap(helpers.ids)).to.eql(['idTest']);
+    expect($("#lengthtest [name='id']", dom).map(helpers.ids)).to.eql(['idTest']);
+    expect($("#lengthtest input[id='idTest']", dom).mgiap(helpers.ids)).to.eql(['idTest']);
   });
 
 });

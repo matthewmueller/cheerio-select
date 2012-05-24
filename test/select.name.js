@@ -18,20 +18,20 @@ var html = read(__dirname + '/fixtures/index.html'),
 /**
  * Mocha tests
  */
-describe('select class', function() {
+describe('select.class', function() {
 
   t( "Name selector", "input[name=action]", ["text1"] );
-  // t( "Name selector with single quotes", "input[name='action']", ["text1"] );
-  // t( "Name selector with double quotes", 'input[name="action"]', ["text1"] );
+  t( "Name selector with single quotes", "input[name='action']", ["text1"] );
+  t( "Name selector with double quotes", 'input[name="action"]', ["text1"] );
 
   t( "Name selector non-input", "[name=test]", ["length", "fx-queue"] );
   t( "Name selector non-input", "[name=div]", ["fadein"] );
   t( "Name selector non-input", "*[name=iframe]", ["iframe"] );
 
-  // t( "Name selector for grouped input", "input[name='types[]']", ["types_all", "types_anime", "types_movie"] );
+  t( "Name selector for grouped input", "input[name='types[]']", ["types_all", "types_anime", "types_movie"] );
 
   t("Name selector within the context of another element", "#form input[name=action]", ['text1']);
-  // t("Name selector for grouped form element within the context of another element", "#form input[name='foo[bar]']", ['hidden2']);
+  t("Name selector for grouped form element within the context of another element", "#form input[name='foo[bar]']", ['hidden2']);
 
   it('should handle rooted queries on forms (with possible expandos)', function() {
     var form = cheerio("<form><input name='id'/></form>");

@@ -6,10 +6,18 @@
 ## Usage
 
     var select = require('cheerio-select'),
-        html = '<ul id = "fruits"><li class = "apple">Apple</li></ul>';
+        parse = require('cheerio').parse,
+        dom = parse('<ul id = "fruits"><li class = "apple">Apple</li></ul>');
 
-    select('#fruits > .apple'); 
+    select('#fruits > .apple', dom);
     => [{...}]
+
+## TODO 
+
+* Get all the unit tests to pass!
+* Consider adding client-side tests
+  * psuedo-visibility: https://github.com/jquery/sizzle/blob/master/test/unit/selector.js#L530
+  * psuedo-form: https://github.com/jquery/sizzle/blob/master/test/unit/selector.js#L554
 
 ## License 
 
