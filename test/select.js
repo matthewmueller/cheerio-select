@@ -1,13 +1,15 @@
-
 /**
  * Module dependencies.
  */
+var select = require('../'),
+    parse = require('cheerio').parse,
+    expect  = require('expect.js');
 
-var cheerio-select = require('cheerio-select')
-  , should = require('should');
 
-module.exports = {
-  'test .version': function(){
-    cheerio-select.version.should.match(/^\d+\.\d+\.\d+$/);
-  }
-};
+describe('select.version', function() {
+  it('should have the proper version number format', function() {
+    expect(select.version).to.match(/^\d+\.\d+\.\d+$/);
+  });
+});
+
+

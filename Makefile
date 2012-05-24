@@ -1,5 +1,7 @@
-
 test:
-	@echo "populate me"
+	@./node_modules/mocha/bin/mocha --reporter dot
 
-.PHONY: test
+subl:
+	@subl lib/ test/ package.json index.js
+
+.PHONY: test subl
