@@ -22,9 +22,9 @@ exports.ids = function(elem) {
   return elem.attribs.id;
 };
 
-exports.t = function(description, selector, ids) {
+exports.t = function(description, selector, ids, d) {
   it(description, function() {
-    var result = $(selector, dom).map(exports.ids);
+    var result = $(selector, d || dom).map(exports.ids);
     expect(result).to.eql(ids);
   });
 };
