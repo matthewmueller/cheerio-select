@@ -1,2 +1,6 @@
+exports = module.exports = require('./lib/select');
 
-module.exports = require('./lib/cheerio-select');
+/*
+ * Library version
+ */
+exports.version = require('./package.json').version;

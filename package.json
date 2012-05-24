@@ -1,10 +1,16 @@
 {
-    "name": "cheerio-select"
-  , "version": "0.0.1"
-  , "description": "Selector engine for cheerio"
-  , "keywords": []
-  , "author": "Matt Mueller <mattmuelle@gmail.com>"
-  , "dependencies": {}
-  , "main": "index"
-  , "engines": { "node": "0.6.x" }
+  "name" : "cheerio-select",
+  "version" : "0.0.1",
+  "description" : "Selector engine for cheerio",
+  "keywords" : [],
+  "author" : "Matt Mueller <mattmuelle@gmail.com>",
+  "dependencies" : {
+    "CSSselect" : "0.x"
+  },
+  "devDependencies" : {
+    "mocha" : "*",
+    "cheerio" : "*"
+  },
+  "main" : "index",
+  "engines" : { "node" : "0.6.x" }
 }
