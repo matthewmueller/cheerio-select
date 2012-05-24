@@ -50,4 +50,15 @@ describe('select.child/adj', function() {
   length("Make sure the temporary id assigned by sizzle is cleared out (#8310)", "#__sizzle__", 0);
   length("Parent div for previous test is still found via ID (#8310)", "#listWithTabIndex", 1);
 
+  t( "Verify deep class selector", "div.blah > p > a", [] );
+
+  t( "No element deep selector", "div.foo > span > a", [] );
+
+  t("Verify child context positional selctor", "#nothiddendiv > :first", ['nothiddendivchild']);
+  t("Verify child context positional selctor", "#nothiddendiv > :eq(0)", ['nothiddendivchild']);
+  t("Verify child context positional selctor", "#nothiddendiv > *:first", ['nothiddendivchild']);
+
+  t( "Non-existant ancestors", ".fototab > .thumbnails > a", [] );
+
 });
+
