@@ -3,6 +3,8 @@
 
   Tiny wrapper around FB55's excellent [CSSselect]() library.
 
+  cheerio-select provides a comprehensive test suite based on sizzle's test suite. If all the tests pass in cheerio-select, then sizzle and cheerio-select should have identical functionality. 
+
 ## Usage
 
     var select = require('cheerio-select'),
