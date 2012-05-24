@@ -3,7 +3,8 @@
  */
 var $ = require('../'),
     _ = require('underscore'),
-    parse = require('cheerio').parse,
+    cheerio = require('cheerio'),
+    parse = cheerio.parse,
     expect  = require('expect.js');
 
 describe('select.normalize', function() {
@@ -35,6 +36,16 @@ describe('select.normalize', function() {
     expect(dom).to.have.length(2);
     expect(dom[0].name).to.equal('ul');
     expect(dom[1].name).to.equal('ul');
+  });
+
+  it('should normalize on cheerio objects', function() {
+    dom = cheerio(dom);
+    expect(dom.cheerio).to.be.ok();
+    dom = $.normalize(dom);
+    expect(dom.cheerio).to.not.be.ok();
+    expect(dom).to.be.an(Array);
+    expect(dom).to.have.length(1);
+    expect(dom[0].name).to.equal('ul');
   });
 });
 
