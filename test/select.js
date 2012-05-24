@@ -7,7 +7,7 @@ var $ = require('../'),
     parse = cheerio.parse,
     expect  = require('expect.js');
 
-describe('select.normalize', function() {
+describe('select#normalize', function() {
   var html = "<ul id = 'fruits'><li class = 'apple'>Apple</li></ul>",
       dom;
 
@@ -50,7 +50,7 @@ describe('select.normalize', function() {
 });
 
 
-describe('$.version', function() {
+describe('select#version', function() {
   it('should have the proper version number format', function() {
     expect($.version).to.match(/^\d+\.\d+\.\d+$/);
   });

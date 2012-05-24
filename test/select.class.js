@@ -9,7 +9,7 @@ var $ = require('../'),
     helpers = require('./helpers'),
     t = helpers.t;
 
-/* 
+/*
  * Load test data
  */
 var html = read(__dirname + '/fixtures/index.html'),
@@ -18,7 +18,7 @@ var html = read(__dirname + '/fixtures/index.html'),
 /**
  * Mocha tests
  */
-describe('select class', function() {
+describe('select.class', function() {
   t( "Class Selector", ".blog", ["mark","simon"] );
   t( "Class Selector", ".GROUPS", ["groups"] );
   t( "Class Selector", ".blog.link", ["simon"] );

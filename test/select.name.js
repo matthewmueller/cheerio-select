@@ -9,7 +9,7 @@ var $ = require('../'),
     helpers = require('./helpers'),
     t = helpers.t;
 
-/* 
+/*
  * Load test data
  */
 var html = read(__dirname + '/fixtures/index.html'),

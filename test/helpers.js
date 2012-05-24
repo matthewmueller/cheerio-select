@@ -28,3 +28,9 @@ exports.t = function(description, selector, ids) {
     expect(result).to.eql(ids);
   });
 };
+
+exports.length = function(description, selector, length) {
+  it(description, function() {
+    expect($(selector, dom)).to.have.length(length);
+  });
+};
