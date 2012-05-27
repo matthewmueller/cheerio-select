@@ -89,6 +89,7 @@ describe('select.attributes', function() {
   //#3279
   var div = cheerio("<div><div id='foo' xml:test='something'></div></div>");
 
-  expect($("[xml\\:test]", div)[0]).to.be(div[0]);
-
+  it('should select $([xml\\:test], div)', function() {
+    expect($("[xml\\:test]", div)[0]).to.be(div[0]);
+  });
 });

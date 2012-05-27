@@ -73,7 +73,7 @@ describe('select.element', function() {
   it('("#lengthtest #idTest") : it should handle id of ID', function() {
     expect($("#lengthtest #idTest", dom).map(helpers.ids)).to.eql(['idTest']);
     expect($("#lengthtest [name='id']", dom).map(helpers.ids)).to.eql(['idTest']);
-    expect($("#lengthtest input[id='idTest']", dom).mgiap(helpers.ids)).to.eql(['idTest']);
+    expect($("#lengthtest input[id='idTest']", dom).map(helpers.ids)).to.eql(['idTest']);
   });
 
 });

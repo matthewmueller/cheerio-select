@@ -1,5 +1,5 @@
 test:
-	@./node_modules/mocha/bin/mocha --reporter dot
+	@./node_modules/mocha/bin/mocha --reporter list
 
 subl:
 	@subl lib/ test/ package.json index.js
