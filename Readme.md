@@ -1,9 +1,11 @@
 
-# cheerio-select
+# cheerio-select [![Build Status](https://secure.travis-ci.org/MatthewMueller/cheerio-select.png?branch=master)](http://travis-ci.org/MatthewMueller/cheerio-select)
 
   Tiny wrapper around FB55's excellent [CSSselect](https://github.com/FB55/CSSselect) library.
 
-  cheerio-select provides a comprehensive test suite based on sizzle's test suite. If all the tests pass in cheerio-select, then sizzle and CSSselect should have identical functionality.
+  cheerio-select provides a comprehensive test suite based on sizzle's test suite. 
+
+  > Warning: Currently, not all tests pass, and some sizzle features will not be supported
 
 ## Usage
 
@@ -17,9 +19,6 @@
 ## TODO 
 
 * Get all the unit tests to pass!
-* Consider adding client-side tests
-  * psuedo-visibility: https://github.com/jquery/sizzle/blob/master/test/unit/selector.js#L530
-  * psuedo-form: https://github.com/jquery/sizzle/blob/master/test/unit/selector.js#L554
 
 ## Run tests
 
