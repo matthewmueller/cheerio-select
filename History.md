@@ -1,4 +1,11 @@
-0.0.1 / 2010-01-03
+0.0.2 / 2012-05-27
 ==================
 
-  * Initial release
+* Now supports for node 0.7.x
+* Commented out tests for features that will not be supported
+* Down to 19/156 failed tests - thanks to @FB55!
+
+0.0.1 / 2012-05-23
+==================
+
+* Initial release
