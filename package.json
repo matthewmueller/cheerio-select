@@ -1,6 +1,6 @@
 {
   "name" : "cheerio-select",
-  "version" : "0.0.2",
+  "version" : "0.0.3",
   "description" : "Selector engine for cheerio",
   "keywords" : [],
   "author" : "Matt Mueller <mattmuelle@gmail.com>",
