@@ -4,6 +4,9 @@
   "description" : "Selector engine for cheerio",
   "keywords" : [],
   "author" : "Matt Mueller <mattmuelle@gmail.com>",
+  "repository": {
+    "url": "git://github.com/MatthewMueller/cheerio-select.git"
+  },
   "dependencies" : {
     "CSSselect" : "0.x"
   },
