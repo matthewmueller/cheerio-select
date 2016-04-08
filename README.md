@@ -1,4 +1,4 @@
-# cheerio-select [![Build Status](https://secure.travis-ci.org/matthewmueller/cheerio-select.png?branch=master)](http://travis-ci.org/matthewmueller/cheerio-select)
+# cheerio-select [![Build Status](https://secure.travis-ci.org/matthewmueller/cheerio-select.svg?branch=master)](http://travis-ci.org/matthewmueller/cheerio-select)
 
 Tiny wrapper around fb55's excellent [`css-select`](https://github.com/fb55/css-select) library.
 
@@ -19,7 +19,7 @@ select('#fruits > .apple', dom);
 
 ## TODO 
 
-* Get all the unit tests to pass!
+- [ ] Get all the unit tests to pass!
 
 ## Run tests
 
